@@ -6,6 +6,7 @@ gem "rails", "4.2.0"
 gem "shopify_app", "~> 5.0.2"
 gem "jquery-rails"
 gem "quiet_assets"
+gem "sqlite3"
 
 group :assets do
   gem "sass-rails"
