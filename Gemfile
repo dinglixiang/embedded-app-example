@@ -19,7 +19,12 @@ group :development, :test do
   gem "therubyracer", platforms: :ruby
   gem "pry-rails"
   gem "sqlite3"
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
 end
+
+gem 'unicorn'
 
 group :production do
   gem "pg"
