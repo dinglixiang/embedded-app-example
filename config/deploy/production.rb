@@ -7,10 +7,16 @@ set :branch, 'master'
 server 'apps.zenpow.com', user: 'lixiang', roles: %w{app db web}, primary: true
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
+set :log_level, :info
 set :rails_env, :production
 set :unicorn_worker_count, 2
 set :enable_ssl, false
 
+#set :ssh_options, {
+  #user: 'lixiang',
+  #keys: %w(/home/lixiang/.ssh/id_rsa),
+  #forward_agent: false
+#}
 
 # role-based syntax
 # ==================
@@ -44,11 +50,6 @@ set :enable_ssl, false
 #
 # Global options
 # --------------
-set :ssh_options, {
-  user: 'lixiang',
-  keys: %w(/home/lixiang/.ssh/id_rsa),
-  forward_agent: true
-}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

@@ -2,6 +2,8 @@
 lock '3.4.0'
 
 set :application, 'embedded_app'
+set :user, 'lixiang'
+set :use_sudo, true
 set :repo_url, 'git@github.com:dinglixiang/embedded-app-example.git'
 
 # Default branch is :master
@@ -21,7 +23,7 @@ set :rvm_ruby_version, '2.1.5'
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/shopify_app.yml', 'config/secrets.yml')
@@ -45,6 +47,8 @@ set(:config_files, %w(
 set(:executable_config_files, %w(
   unicorn_init.sh
 ))
+
+set :tests, []
 
 # files which need to be symlinked to other parts of the
 # filesystem. For example nginx virtualhosts, log rotation
